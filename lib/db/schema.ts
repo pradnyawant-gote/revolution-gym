@@ -1,10 +1,10 @@
-import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core';
+import { pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
 
-export const enrollments = sqliteTable('enrollments', {
-  id: integer('id').primaryKey({ autoIncrement: true }),
-  userId: text('user_id').notNull(),
-  userEmail: text('user_email'),
-  userName: text('user_name'),
-  programName: text('program_name').notNull(),
-  enrolledAt: integer('enrolled_at', { mode: 'timestamp' }).notNull(),
+export const enrollments = pgTable("enrollments", {
+  id: serial("id").primaryKey(),
+  userId: text("user_id").notNull(),
+  userEmail: text("user_email").notNull(),
+  userName: text("user_name"),
+  programName: text("program_name").notNull(),
+  enrolledAt: timestamp("enrolled_at").defaultNow().notNull(),
 });

@@ -1,8 +1,6 @@
-import { drizzle } from 'drizzle-orm/better-sqlite3';
-import Database from 'better-sqlite3';
+import { neon } from '@neondatabase/serverless';
+import { drizzle } from 'drizzle-orm/neon-http';
 import * as schema from './schema';
-import path from 'path';
 
-// Store DB in the root directory
-const sqlite = new Database(path.join(process.cwd(), 'sqlite.db'));
-export const db = drizzle(sqlite, { schema });
+const sql = neon(process.env.DATABASE_URL!);
+export const db = drizzle(sql, { schema });

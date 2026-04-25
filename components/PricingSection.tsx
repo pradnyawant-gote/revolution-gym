@@ -29,7 +29,15 @@ export default function PricingSection() {
           viewport={{ once: true }}
           className="w-full flex justify-center pricing-table-wrapper text-neutral-900"
         >
-          <PricingTable />
+          <PricingTable
+            appearance={{
+              variables: {
+                colorText: "#000000",
+                colorTextSecondary: "#4b5563", // gray-600
+                colorBackground: "#ffffff",
+              },
+            }}
+          />
         </motion.div>
       </div>
     </section>

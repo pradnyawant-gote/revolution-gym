@@ -87,7 +87,6 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 export default function StatsSection() {
   return (
     <section className="relative py-24 sm:py-32 bg-gym-dark overflow-hidden">
-      {/* Background accent */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(229,0,10,0.08)_0%,_transparent_60%)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,25 +101,17 @@ export default function StatsSection() {
               className="relative group"
             >
               <div className="relative p-6 sm:p-8 rounded-2xl bg-gym-dark-card border border-white/5 hover:border-gym-red/30 transition-all duration-500 text-center overflow-hidden">
-                {/* Hover glow */}
                 <div className="absolute inset-0 bg-gradient-to-b from-gym-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                {/* Icon */}
                 <div className="relative inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gym-red/10 text-gym-red mb-4">
                   {stat.icon}
                 </div>
-
-                {/* Number */}
                 <div className="relative text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-2">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </div>
-
-                {/* Label */}
                 <div className="relative text-sm sm:text-base text-white/50 font-medium">
                   {stat.label}
                 </div>
-
-                {/* Bottom accent line */}
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gym-red to-gym-orange group-hover:w-3/4 transition-all duration-500" />
               </div>
             </motion.div>

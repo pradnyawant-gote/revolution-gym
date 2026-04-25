@@ -27,7 +27,7 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="w-full flex justify-center pricing-table-wrapper"
+          className="w-full flex justify-center pricing-table-wrapper text-neutral-900"
         >
           <PricingTable />
         </motion.div>

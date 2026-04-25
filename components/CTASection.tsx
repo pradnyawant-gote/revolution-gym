@@ -7,11 +7,9 @@ import { Button } from "@/components/ui/button";
 export default function CTASection() {
   return (
     <section className="relative py-24 sm:py-32 overflow-hidden">
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-gym-red/20 via-gym-dark to-gym-orange/10" />
       <div className="absolute inset-0 bg-gym-dark/80" />
 
-      {/* Animated glow orbs */}
       <motion.div
         className="absolute top-0 left-1/4 w-96 h-96 bg-gym-red/20 rounded-full blur-[150px]"
         animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}

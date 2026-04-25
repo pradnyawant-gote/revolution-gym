@@ -27,7 +27,7 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="w-full flex justify-center pricing-table-wrapper [&_*]:text-black [&_button_*]:!text-white"
+          className="w-full flex justify-center pricing-table-wrapper [&_*]:!text-black [&_button_*]:!text-white"
         >
           <PricingTable
             appearance={{
